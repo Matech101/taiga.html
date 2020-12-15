@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taiga-Biome</title>
+<style>
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#taiga{
+  font-size: 80px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://i.pinimg.com/originals/af/9f/74/af9f74f078e4c6079f8c754ad2e1c0e3.jpg');
+  /*background-color: #C0C0C0;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100% 100%;
+}
+
+.top-container {
+  z-index: 2;
+  background-image: url('https://wi.wallpapertip.com/wsimgs/77-773710_beautiful-pictures-of-the-taiga-biome.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100% 26%;
+  padding: 30px;
+  text-align: center;
+  color:white;
+}
+
+.header {
+  padding: 10px 16px;
+  background: linear-gradient(90deg, rgba(6,255,252,1) 6%, rgba(244,124,219,1) 51%, rgba(113,251,135,1) 92%);
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+.dropbtn {
+  background-color:#1ae2ea ;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn:hover {
+  background-color: rgba(100,1500,69,1);
+}
+.dropdown-content a:hover {background-color: rgba(100,1500,69,1); color:white;}
+
+.dropdown:hover .dropdown-content {display: block;color:white}
+
+.dropdown:hover{
+  background-color: orange;
+  color:white;
+}
+
+.btnholder{
+  text-decoration: none;
+}
+.btnhome{
+  background-color:#1ae2ea;
+  border:0px;
+  color:white;
+  text-decoration:none;
+  color: white;
+  padding:16px;
+  font-size:20px;
+  border-radius: 10%;
+}
+.btnhome:hover{
+  background-color:  rgba(100,1500,69,1);
+  color:white;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  z-index: ;
+  margin-top:1%;
+  width: 100%;
+  position: static;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.ridhref{
+  text-decoration: none;
+  color:white
+}
+
+.footer{
+  width:100%;
+  background: linear-gradient(90deg, rgba(6,255,252,1) 6%, rgba(113,251,136,1) 50%, rgba(100,187,187,1) 96%);
+  color:white;
+}
+
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 19%;
+  height:20%;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: grey;
+  margin-left: 0.85%;
+}
+
+.column1 {
+  float: left;
+  width: 15.66%;
+  height: 10%;
+  height:20%;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color:grey;
+  margin-left: 0.85%;
+}
+
+.column2 {
+  margin-top:-1.59%;
+  float: left;
+  width: 50%;
+  height: 20%;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: grey;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+.pinapple:hover {
+ animation: shake 0.5s;
+ animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+ 0% { transform: translate(1px, 1px) rotate(0deg); }
+ 10% { transform: translate(-1px, -2px) rotate(-1deg); }
+ 20% { transform: translate(-3px, 0px) rotate(1deg); }
+ 30% { transform: translate(3px, 2px) rotate(0deg); }
+ 40% { transform: translate(1px, -1px) rotate(1deg); }
+ 50% { transform: translate(-1px, 2px) rotate(-1deg); }
+ 60% { transform: translate(-3px, 1px) rotate(0deg); }
+ 70% { transform: translate(3px, 1px) rotate(-1deg); }
+ 80% { transform: translate(-1px, -1px) rotate(1deg); }
+ 90% { transform: translate(1px, 2px) rotate(0deg); }
+ 100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.normal-text{
+  font-family: sans-serif;
+  font-size:20px;
+  margin-left:1%;
+}
+.title-text{
+  font-size:30px;
+  margin-left:1%;
+}
+
+.box-text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+#stroke{
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: grey;
+}
+
+#stroke1{
+  color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: grey;
+}
+</style>
+</head>
+<body>
+<div class="top-container">
+ <center>
+   <h1  class="stroke"style="color:white; margin-top:3%;" id="stroke1"> Taiga</h1>
+ </center>
+</div>
+<div class="header" id="myHeader">
+ <div>
+  <!--<button class="btnhome"> <a class="ridhref" href="#"> Home </a></button>-->
+  <div class="dropdown">
+   <button class="dropbtn" class="dropbtn"id="stroke"> Taiga </button>
+   <div class="dropdown-content">
+    <a href="#weather"> Weather </a>
+    <a href="#Seasons"> Seasons </a>
+    <a href="#climate"> Climates </a>
+    <a href="#elevation"> Elevation and geology </a>
+   </div>
+  </div>
+  <div class="dropdown">
+   <button class="dropbtn" id="stroke">Map</button>
+    <div class="dropdown-content">
+     <a href="#maps">Location of Taiga</a>
+     <a href="#temperature">World temperature</a>
+     <a href="#plains">World Plains</a>
+     <a href="#wind">World Wind direction</a>
+     <a href="#resources">World Natural Resources</a>
+    </div>
+  </div>
+  <div class="dropdown">
+   <button class="dropbtn" id="stroke">Fauna</button>
+    <div class="dropdown-content">
+     <a href="#Animals" onclick="openTab('b1.1');" >Northern pike</a>
+     <a href="#Animals" onclick="openTab('b1.2');">Wood frog</a>
+     <a href="#Animals" onclick="openTab('b1.3');">Garter snake</a>
+     <a href="#Animals" onclick="openTab('b1.4');">Chipmunk</a>
+     <a href="#Animals" onclick="openTab('b1.5');">Hawks</a>
+     <a href="#Animals" onclick="openTab('b1.6');">Brown bear</a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn" id="stroke">Flora</button>
+      <div class="dropdown-content">
+        <a href="#trees" onclick="openTab('b1');">Pine</a>
+        <a href="#trees" onclick="openTab('b2');">Spruces</a>
+        <a href="#trees" onclick="openTab('b3');">Larch</a>
+        <a href="#trees" onclick="openTab('b4');">Fir</a>
+        <a href="#trees" onclick="openTab('b5');">Birch</a>
+      </div>
+    </div>
+  <button class="btnhome"> <a class="ridhref" href="#nanai" id="stroke"> Nanai community </a></button>
+  <div class="dropdown">
+   <button class="dropbtn" id="stroke">Threats</button>
+    <div class="dropdown-content">
+     <a href="#extinction">Extinction</a>
+     <a href="#deforestaion">Deforestation</a>
+     <a href="#acid">Acid rain</a>
+     <a href="#Invasive">Invasive species</a>
+    </div>
+   </div>
+   <button class="btnhome"> <a class="ridhref" href="#Solution" id="stroke"> Solution </a></button>
+   <button class="btnhome"> <a class="ridhref" id="stroke" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSftVAReNQ6RH9bHPSo4bhKX86esDIoUidl7GWC9sxHZoOvV6A/viewform"> Survey </a></button>
+ </div>
+</div>
+<div style="color:grey; background-color:white; width:80%; margin-left:10%; padding-top:1%;">
+  <div class="slideshow-container">
+    <center>
+      <div class="mySlides fade">
+        <div class="numbertext">
+        </div>
+       <img src="https://1789a7.medialib.edu.glogster.com/17kG2d5QYsk1ABZHm2Wq/media/24/24d5ee8651c96bbaf5f64dfd6554acd20b959953/taiga-northern-lights.jpg" style="width:80%; border-radius:8%;">
+      </div>
+      <div class="mySlides fade">
+       <div class="numbertext">
+       </div>
+       <img src="https://img3.stockfresh.com/files/t/taiga/m/68/7568557_stock-photo-beautiful-winter-forest-landscape---trees-covered-snow-and-smal.jpg" style="width:80%; border-radius:8%">
+      </div>
+      <div class="mySlides fade">
+       <div class="numbertext">
+       </div>
+       <img src="https://wp.nathabblog.com/wp-content/uploads/2019/01/Banff-Canada_Gabriel-Caparo_flickr_Web.jpg" style="width:80%; border-radius:8%">
+      </div>
+      <div id="weather">
+      </div>
+    </div>
+     <br>
+     <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+     </div>
+   </center>
+     <div id="Seasons" style="display:inline-block; margin-top:5%">
+      <div id="weathertext" style="width:60%; float:left;">
+       <p class="title-text"> Weather </p>
+       <p class="normal-text">Taiga is characterized by very cold weather, low rate of precipitation. (Snow and rain) and a short growing season. A long and intense winter lasting
+       up to 6 months,with average temperatures below freezing. Summer is short and long, maybe 50 to 100 days without frost. The winters in the taiga are long and cold.
+       </p>
+      </div>
+     <img class="pinapple" src="https://borealforestandtaiga.weebly.com/uploads/1/9/8/1/19817719/5144766.gif?472" style="  width:40%; float:right;">
+    </div>
+    <div   id="climate" style="display:inline-block">
+     <div id="weathertext">
+      <p class="title-text"> Seasons </p>
+      <p class="normal-text">The main seasons of the taiga are winter and summer. Spring and fall are so short that you hardly know they exist. Taiga is either hot, humid or very cold. There are few taiga plants
+      due to the harsh environment.</p>
+     </div>
+    </div>
+    <div  id="elevation"  style="display:inline-block">
+     <div id="weathertext">
+      <p class="title-text"> Climate </p>
+      <p class="normal-text">The taiga climate is for the most part dominated by cold arctic air. Exceptionally cold winds bring bitterly cold air from the Arctic Circle: the temperatures fall even more on clear nights when there is no cloud cover. Because of earth's tilt, the taiga is turned away from the sun in the winter. Less of the sun's radiation reaches the ground to warm it up.
+      </p>
+     </div>
+    </div>
+    <div id="maps" style="display:inline-block">
+     <div id="weathertext">
+      <p class="title-text"> Elevation and Geology </p>
+      <p class="normal-text">So at around 3,000 feet in elevation, more or less, the predominant biome becomes taiga, which is more commonly known as coniferous forest or a forest composed of evergreen conifers. and also The taiga is a forest of the cold, subarctic region. The subarctic is an area of the Northern Hemisphere that lies just south of the Arctic Circle. Taiga lies between the tundra to the north and temperate forests to the south. Alaska, Canada, Scandinavia, and Siberia have taigas.
+      </p>
+     </div>
+    </div>
+    <div id="maps" style="margin-top:3%;">
+     <center>
+      <u><p class="title-text">Location of Taiga</p>
+      <img src="https://i.pinimg.com/originals/8b/40/b2/8b40b2d5d2ef141256b99192f0219b98.png" style="width:90%;">
+      <div style="margin-top:5%">
+      </div>
+      <p id="temperature" class="title-text">World temperature</p>
+       <img src="https://www.aerisweather.com/blog/wp-content/uploads/2019/03/tempmap2.png " style="width:90%;">
+       <div style="margin-top:5%">
+       </div>
+       <p id="plains"class="title-text">World Plains</p>
+       <img src="https://bioone.org/ContentImages/Journals/mred/21/1/0276-4741_2001_021_0034_ANTFMA_2.0.CO_2/graphic/i0276-4741-21-1-34-f02.jpg " style="width:90%;">
+       <div style="margin-top:5%">
+       </div>
+       <p id="wind"class="title-text">World Wind direction</p> </u>
+      <img src="https://i.pinimg.com/originals/ca/b6/16/cab6169046ff877b90bccc670d3a3388.jpg " style="width:90%;">
+      <div style="margin-top:5%" >
+      </div>
+      <img id="resources"src="https://i.pinimg.com/originals/7c/47/c9/7c47c930cf72a6553f6ba140e400bd4a.jpg" style="width:90%;">
+     </center>
+    <div id="Animals" >
+    </div>
+  </div>
+  <div>
+    <center>
+     <p class="title-text">Fauna</p>
+    </center>
+    <p class="normal-text">Most animals migrate to warmer climates when the weather starts to get cold. Some animals adapted to life in the taiga by hibernating as the temperature dropped. Other animals have adapted to very cold temperatures by producing insulated fur or wool to protect them from the cold. In some cases, seasonal adjustments to the fur or coat will protect the animal from predators. Ermine, a small mammal, is a good example of this adaptation. Dark brown summer coat will turn white in winter. This adjustment allows Ermin to blend in with his surroundings and makes it harder for Ermin's hunters to see.</p>
+    <div class="row">
+     <div class="column1" onclick="openTab('b1.1');" style="background:#cdccd0; height:10%;">
+       <p class="box-text">Northern pike</p>
+     </div>
+     <div class="column1" onclick="openTab('b1.2');" style="background:#fba753;">
+       <p class="box-text">Wood frog</p>
+     </div>
+     <div class="column1" onclick="openTab('b1.3');" style="background:tan;">
+       <p class="box-text">Garter snake</p>
+     </div>
+     <div class="column1" onclick="openTab('b1.4');" style="background:lightblue;">
+      <p class="box-text">Chipmunks</p>
+     </div>
+     <div class="column1" onclick="openTab('b1.5');" style="background:lightgreen;">
+      <p class="box-text">Owl Hawks</p>
+     </div>
+     <div class="column1" onclick="openTab('b1.6');" style="background:pink;">
+      <p class="box-text">Brown bear</p>
+     </div>
+    </div>
+    <div id="b1.1" class="containerTab" style="display:none;background:#cdccd0; width: 98.2%; margin-left:0.85%;">
+     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+     <p class="title-text">Northern pike</p>
+     <p class="normal-text">Northern pike are circumpolar in the freshwater world of the northern hemisphere. Adult northern pike are usually solitary and highly territorial. Spawning adults will begin to move inshore or upstream to marsh areas to spawn as soon as the ice begins to break up or thaw in early spring. Spawning will normally occur during daylight hours in shallow quiet areas with a weed bottom.</p>
+     <center>
+      <img src="https://www.michigan.gov/images/dnr/northern-pike-big_602511_7.png">
+     </center>
+    </div>
+    <div id="b1.2" class="containerTab" style="display:none; background:#fba753; width: 98.2%; margin-left:0.85%;">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <p class="title-text">Wood frog</p>
+      <p class="normal-text"> Wood frogs have adapted to cold climates by freezing them in winter. During this time, they stop breathing and their heart stops beating. Their bodies produce special antifreeze that prevents ice from freezing inside the cells, which can be life-threatening. Ice formed in the spaces between the cells. As the weather warms up, the frogs will melt and begin feeding and mating again.</p>
+      <center>
+        <img src="https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Amphibians/amphibian-wood-frog-MichaelZahniser-Wikimedia-600x300.ashx" style="width:50%;">
+      </center>
+    </div>
+    <div id="b1.3" class="containerTab" style="display:none; background: tan; width: 98.2%; margin-left:0.85%;">
+     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+     <p class="title-text">Red sided garter snake</p>
+     <p class="normal-text">The red-sided gartersnake is a habitat generalist and, during its active season, occupies habitat similar to that of the eastern gartersnake – forests, shrublands, wetlands, fields and rocky areas. High-quality hibernation sites that are deep and below the frost line are crucial for this snake, because its range reaches further north than that of any other land-dwelling reptile in Canada.</p>
+     <center>
+       <img src="https://static.inaturalist.org/photos/30284389/large.jpg?1547589338" style="width:50%;">
+     </center>
+    </div>
+    <div id="b1.4" class="containerTab" style="display:none; background: lightblue; width: 98.2%; margin-left:0.85%;">
+     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+     <p class="title-text">Chipmunks</p>
+     <p class="normal-text">Taiga and temperate forests of Scandinavia, Western Russia, and Asia. The Siberian chipmunk is wildlife. With its sharp claws, it is an excellent climber. But lives mainly on the ground They lived in lodges built on the ground. In northern Asia, the Siberian chipmunk lives in the same habitat as the larch, and in Europe, it lives in regions where the scotch pine grows.</p>
+     <center>
+      <img src="https://www.ctvnews.ca/polopoly_fs/1.5030228.1595172752!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg" style="width:50%;">
+     </center>
+    </div>
+    <div id="b1.5" class="containerTab" style="display:none; background: lightgreen; width: 98.2%; margin-left:0.85%;">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <p class="title-text">Owl Hawk</p>
+      <p class="normal-text">Hawk owls are unevenly distributed and highly variable throughout the Boreal Forest. They mostly live in open pine or mixed pine forests with deciduous species such as larch, birch, alder, and Willow They are found in mussels, clearings, canyons, swamps, grasslands, or recently in burnt areas. They generally avoid dense coniferous forests. The winter habitat is usually the same as the breeding habitat.</p>
+      <center>
+        <img src="https://www.allaboutbirds.org/guide/assets/photo/37234381-480px.jpg" style="width:50%;">
+      </center>
+   </div>
+   <div id="b1.6" class="containerTab" style="display:none; background: pink; width: 98.2%; margin-left:0.85%;">
+     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+     <p class="title-text">Brown bear</p>
+     <p class="normal-text">Brown bears live mostly in the taiga. There are three subspecies In North America they are grizzly and Kodiak bears, and in Europe and Asia, they are Eurasian brown bears. This bear has many useful modifications to help it survive in the taiga. First, the bear hibernates to survive the bitter winter. The second is general and omnivore. This allows the bear to find plenty of food because there is a wide selection of them. Brown bears have a very good smell to help them find food.</p>
+     <center>
+       <img src="https://taigamallory.weebly.com/uploads/1/1/3/2/11325886/5800349.jpg" style="width:50%;">
+     </center>
+   </div>
+  <div>
+    <center>
+     <img src="https://cougarbiology.pbworks.com/f/Matthew%20Welts.gif" style="width:50%; margin-top:5%;">
+    <cente>
+  </div>
+ </div>
+<!-- Three columns -->
+  <div>
+    <center>
+      <p class="title-text">Flora</p>
+    </center>
+    <p class="title-text">How did trees adapt?</p>
+    <ul class="normal-text">
+     <li>Conifers have adapted to survive the long, cold winters and short summers of the taiga. </li>
+     <li>Their needles contain very little sap, which helps prevent freezing.</li>
+     <li>The waxy coating on the tree needles prevents evaporation</li>
+     <li>The darkness of the needles helps to attract more sun</li>
+     <li>The roots of the confers will grow downwards which protects the trees from the winds that can be harsh at times in the Taiga’s winters.</li>
+    </ul>
+    <div class="row" id="trees">
+      <div class="column" onclick="openTab('b1');" style="background:pink;">
+        <p class="box-text">Pine</p>
+      </div>
+      <div class="column" onclick="openTab('b2');" style="background:lightgreen;">
+        <p class="box-text">Spruces</p>
+      </div>
+      <div class="column" onclick="openTab('b3');" style="background:lightblue;">
+        <p class="box-text">Larch</p>
+      </div>
+      <div class="column" onclick="openTab('b4');" style="background:tan;">
+        <p class="box-text">Fir</p>
+      </div>
+      <div class="column" onclick="openTab('b5');" style="background:#fba753;">
+        <p class="box-text">Birch</p>
+      </div>
+    </div>
+      <!-- Full-width columns: (hidden by default) -->
+      <div id="b1" class="containerTab" style="display:none;background:pink; width: 98.4%; margin-left:0.85%;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p class="title-text">Pine</p>
+        <p class="normal-text">Pine trees adapt to flat areas or hills with sandy soil. Coniferous plants do not have a special root system. It is possible for pine trees to grow in taiga due to the presence of pine needles, waxy, and rough bark. It's good to have pine needles, wax, and coarse bark in taiga because the wax on pine needles protects the needles, and so does the rough bark. They protect the trees from the cold winds in the taiga. characteristics They also protect this tree from the climate in the taiga, which is often cold. In taiga, the brush starts to set a forest fire, and pine needles, waxy rice, and rough bark protect the trees. Pine trees have long and slender branches so snow does not cling to the branches.</p>
+        <center>
+          <img src="https://cdn.britannica.com/50/6650-050-E268AC16/coniferous-forest-spruce-trees-forests-boreal-Northern.jpg" style="width:50%;">
+        </center>
+      </div>
+      <div id="b2" class="containerTab" style="display:none; background: lightgreen; width: 98.4%; margin-left:0.85%;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p class="title-text">Spruce</p>
+        <p class="normal-text">The spruce is found all across the taiga biome. It is a tall coniferous tree that has short flimsy branches. The adaptations that make it suitable to the taiga are, waxy needles and tough bark. The wax on the needles protect them from the bitter cold of winter.</p>
+        <center>
+          <img src="https://hiddenspringstreefarm.com/images/Whitesprucehtf.jpg" style="width:50%;">
+        </center>
+      </div>
+      <div id="b3" class="containerTab" style="display:none; background: lightblue; width: 98.4%; margin-left:0.85%; ">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p class="title-text">Larch</p>
+        <p class="normal-text">Larches, ranging in height from 20 to 45 meters, are native to the colder northern hemisphere, mainly on the northern plains and high in the mountains further south. Larches are one of the dominant plants in the northern forests. The vastness of Russia, Canada, and Scandinavia Although larch But larch is a deciduous tree and loses its leaves in the fall.</p>
+        <center>
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/df/cd/ad/larch-trees-in-full-splendor.jpg" style="width:50%;">
+        </center>
+      </div>
+      <div id="b4" class="containerTab" style="display:none; background: tan; width: 98.4%; margin-left:0.85%;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p class="title-text">Fir</p>
+        <p class="normal-text">The taiga climate is ideal for pine growing. These northern forests contain a variety of pine trees that grow, such as balsam pines and white pines, as well as most trees in the taiga, pine trees, etc. That means they will not lose their leaves. Instead of traditional foliage, fir trees have needles, which have less surface area than leaves, requiring less energy to grow. Another reason these pines can survive because of the cold is that they are quite thick. This means that it has less dehydration than conventional foliage, because it is cold, it adapts by growing tall and upright rather than having sprawling branches to enable energy savings. An interesting feature of the fur tree is that it has Remains unchanged from prehistoric times This allows them to adapt fairly easily to hot climates, as well as to the colder ones, although some pine trees adapt easily after a fire. But the balsam pine could not. In fact, their seeds are completely destroyed after being burnt and they grow again 30 to 50 years after the fire.
+        </p>
+        <center>
+          <img src="https://itsataiga.weebly.com/uploads/1/9/7/8/19787127/9122286_orig.jpg" style="width:35%;">
+        </center>
+      </div>
+      <div id="b5" class="containerTab" style="display:none; background: #fba753; width: 98.4%; margin-left:0.85%;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p class="title-text">Birch</p>
+        <p class="normal-text">Birch is a large tree. They can grow from 60-80 feet in height.Birches have thin bark that peels off paper-thin pieces.These trees can grow in clusters as well. This tree grows in the Canadian taiga up to the tundra. It also grows in the deciduous forests as far as the Appalachian Mountains.</p>
+        <center>
+          <img src="https://ourtaiga.weebly.com/uploads/2/0/3/4/20349307/132732351.jpg" style="width:35%;">
+        </center>
+      </div>
+    </div>
+    <div id="nanai" style="margin-top:5%; display:inline-block;">
+      <div style="width:62%;" style="float:left">
+        <p class="title-text">Nanai Location</p>
+        <p class="normal-text">Nanai village is located on the bank of the Amur River. The 1860 Beijing Treaty divided the area of ​​residence between Russia and China.Much of Russia's Nanai lived in Khabarovsky Krai. At one time, many Chinese and Koreans lived in the area. But it was resettled in the late 1930s, the village of Nanai, located from Khabarovsk to Komsomolsk-on-Amur and in the Pozharsky district of Primorsky Krai, a region in the far east of Russia. A small subset of Nanais, hechzhe, lives in China.</p>
+      </div>
+      <img class="pinapple" src="https://ars.els-cdn.com/content/image/1-s2.0-S1229545014000254-gr2.jpg" width="35%" style="float:right; margin-top:-25%;">
+      <p class="title-text" style="margin-top:18%;"> Nanai Traditional&Product</p>
+      <p class="normal-text">Their main traditional occupation was fishing and hunting. In winter, they build fur (sable, squirrel, pole, moose, musk, bear, red deer or maral), they fish using round nets and harpoons. (Large Siberian sturgeon, Siberian salmon and pink salmon) The spawning of salmon is the main activity in the life of farmers in These people gathered berries, nuts and ginseng. (Plants from humans) and they take care of sled dogs. Nanaai traveled by boat (Birch hollow plank) Ski and sled. The continued contact with China had a great influence on the Nanai culture. In exchange for wool and fish, they got tobacco, millet, vodka, and fabrics. (Such as silk and linen) Nanai smithing developed under the influence of these contacts in the 17th century, Nanai armor, helmets and chain armor were very popular in China and Manchuria. Men were made of metal, wood and bone, while women sewed clothes and shoes from wool of taiga and fish skins. Women also embroider / sew for everyday needs and for sale. They spun the basket too.
+      </p>
+      <img class="pinapple" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Nanai_bag_Museum_fuer_Voelkerkunde_Dresden_35109.jpg/301px-Nanai_bag_Museum_fuer_Voelkerkunde_Dresden_35109.jpg" style="width:29%; margin-left:2.5%;">
+      <img class="pinapple" src="https://i.ytimg.com/vi/pAtZnaCf1Ew/hqdefault.jpg" style="width:29%; margin-left:2.5%;">
+      <img class="pinapple" src="https://i.pinimg.com/736x/b2/3d/75/b23d750767282fb9b87e7f30894c8bb6.jpg" style="width:29%; margin-left:2.5%;">
+      <div id="Invasive">
+      </div>
+    </div>
+    <div id="deforestaion"  style="margin-top:7%;">
+      <div style="display:inline-block; width:65%; margin-top:5%;">
+       <p class="title-text">Invasive species</p>
+       <p class="normal-text">And another threat to the taiga is invasive species. Invasive species such as the Emerald Ash Borer Beetle pose a significant threat to the taiga. These beetles destroy vast forests that is unaccustomed to surviving.</p>
+      </div>
+      <img class="pinapple"src="https://static.wixstatic.com/media/d99983_6b3c53b604f74229834761d655ba6807~mv2.jpg/v1/fill/w_375,h_209,fp_0.50_0.50,q_90/d99983_6b3c53b604f74229834761d655ba6807~mv2.jpg" style="float:right; width:33%; margin-right:1%; margin-top:5%;">
+    <div id="acid"   style="display:inline-block; width:100%; margin-top:2%;">
+      <p class="title-text"> Deforestaion </p>
+      <p style=" font-size:20px; margin-left:1%;">One of the main environmental problems for taiga is deforestation or tree cutting. Unfortunately, many of the products we use every day are from logging or tree harvesting for human use in the taiga. Most of the wood that complements our homes, such as the crossbeams and our hardwood floors, are from taiga. Paper products, such as newsprint, originate from trees in the taiga. </p>
+   </div>
+   <div id="extinction">
+     <p class="title-text">Acid Rain</p>
+     <p class="normal-text">Acid rain also posed a major problem for taiga forests. Acid rain is rain that is more acidic than normal. Scientists have discovered that air pollution from the burning of fossil fuels is the leading cause of acid rain. Power plants and coal and oil burning plants Smoke and smoke from the combustion of fossil fuels rise into the atmosphere and combine with air humidity to form acid rain. The main chemicals in air pollution that generate acid rain are sulfur dioxide and nitrogen oxides. Acid rain doesn't usually kill plants directly. But it tends to weaken trees by destroying their leaves, limiting available nutrients, or poisoning them with toxins that are slowly released from the soil. When trees are weak, they can be more easily attacked by the disease or insect that eventually kills them. Weak trees may be more easily injured by cold weather.</p>
+   </div>
+   <div>
+    <p class="title-text">Extinction</p>
+    <p class="normal-text"> Due to dangerous human activities such as hunting, we have brought many taiga animals near danger and extinction. The acquisition of valuable items such as fur, fashion and fresh meat from taiga, although hunting and slaughtering, the population of many species is not expected to be adjusted according to the original statistics.</p>
+    <img class="pinapple"src="http://stevagon-osu.weebly.com/uploads/1/2/1/5/12150578/__5710276.jpg" style="width:30%; margin-left:1%;">
+    <img class="pinapple"src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/11/05/15/hossein-golabchi.jpg" style="width:30%; margin-left:1%;">
+    <img class="pinapple"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAa36b6sywrHABZ84ZOxuzAXsQu21eupP2aw&usqp=CAU" style="width:30%; margin-left:1%;">
+  </div>
+ </div>
+ <div id="Solution" style="margin-top:8%;">
+   <p class="title-text">Solution</p>
+   <p class="normal-text">Although humans will certainly destroy the environment But there are still solutions to the influence that humans have on the environment. Deforestation is the process of cutting down trees. Reforestation is the process of replanting or replacing trees that have been cut down or burned by fire. Planting new trees will help restore the natural balance of the ecosystem.
+  Solving acid rain is easy. But not as easy as going out and planting a tree. Acid rain caused by pollution If humans reduce the amount of pollution that enters the atmosphere, it can reduce the amount of acid rain generated in the forest. Finding alternative energy sources and having a cleaner car are other ways to reduce the chance of acid rain.</p>
+ </div>
+</div>
+<footer class="footer">
+  <div class="row">
+  <div class="column2" onclick="openTab('b2.1');" style="background:lightblue;">
+    <p class="title-text"> Sources </p>
+  </div>
+  <div class="column2" onclick="openTab('b2.2');" style="background:lightgreen;">
+        <p class="title-text"> Image address </p>
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b2.1" class="containerTab" style="display:none; background: lightblue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p class="normal-text">
+  -fossweb.com <br>
+  -blueplanetbiomes.org <br>
+  -nationalgeographic.org<br>
+  -stevagon-osu.weebly.com<br>
+  -study.com <br>
+  -thetaigashield.wordpress.com<br>
+  -fws.gov <br>
+  -nwf.org <br>
+  -ontarionature.org <br>
+  -projecttaiga.weebly.com <br>
+  -sciencedirect.com<br>
+  -91taiga.weebly.com <br>
+  -internetgeography.net<br>
+  </p>
+</div>
+
+<div id="b2.2" class="containerTab" style="display:none;background:lightgreen">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p class="normal-text">
+    -Taiga beautiful image:<br>
+    1.https://i.pinimg.com/originals/af/9f/74/af9f74f078e4c6079f8c754ad2e1c0e3.jpg<br>
+    2.https://wi.wallpapertip.com/wsimgs/77-773710_beautiful-pictures-of-the-taiga-biome.jpg<br>
+    3.https://1789a7.medialib.edu.glogster.com/17kG2d5QYsk1ABZHm2Wq/media/24/24d5ee8651c96bbaf5f64dfd6554acd20b959953/taiga-northern-lights.jpg<br>
+    4.https://img3.stockfresh.com/files/t/taiga/m/68/7568557_stock-photo-beautiful-winter-forest-landscape---trees-covered-snow-and-smal.jpg<br>
+    5.https://wp.nathabblog.com/wp-content/uploads/2019/01/Banff-Canada_Gabriel-Caparo_flickr_Web.jpg<br>
+    -map(taiga biome on the earth):<br>
+    https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Taiga_ecoregion.png/300px-Taiga_ecoregion.png<br>
+    -map(world temperature):<br>
+    https://www.aerisweather.com/blog/wp-content/uploads/2019/03/tempmap2.png<br>
+    -map(world mountain)<br>
+    https://bioone.org/ContentImages/Journals/mred/21/1/0276-4741_2001_021_0034_ANTFMA_2.0.CO_2/graphic/i0276-4741-21-1-34-f02.jpg<br>
+    -world wind map<br>
+    https://i.pinimg.com/originals/ca/b6/16/cab6169046ff877b90bccc670d3a3388.jpg<br>
+    -taiga food chain<br>
+    https://cougarbiology.pbworks.com/f/Matthew%20Welts.gif<br>
+    -hunter kill animal<br>
+    1.http://stevagon-osu.weebly.com/uploads/1/2/1/5/12150578/__5710276.jpg<br>
+    2.https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/11/05/15/hossein-golabchi.jpg<br>
+    3.https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAa36b6sywrHABZ84ZOxuzAXsQu21eupP2aw&usqp=CAU<br>
+    -resource world map<br>
+    https://lh3.googleusercontent.com/proxy/f6lK4n_vaECFf_bxPwZkwKOUPDC664Q60X6psNYrdXy3Ts_z9DWzMdDgUYN3P_<br>LG4AtslaVqMETGI8uJgq6s5qWm3XX6udrtMF1mp4l2O93LIWPj<br>
+    -deforestation<br>
+    https://the-taiga-biome.weebly.com/uploads/1/0/1/4/10144422/7170342.jpg?394<br>
+    -invasive species<br>
+    https://static.wixstatic.com/media/d99983_6b3c53b604f74229834761d655ba6807~mv2.jpg/v1/fill/w_375,h_209,fp_0.50_0.50,q_90/d99983<br>_6b3c53b604f74229834761d655ba6807~mv2.jpg<br>
+    -red sided garter snake<br>
+    https://static.inaturalist.org/photos/30284389/large.jpg?1547589338<br>
+    -Northern pike<br>
+    https://www.michigan.gov/images/dnr/northern-pike-big_602511_7.png<br>
+    -Wood frog<br>
+    https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Amphibians/amphibian-wood-frog-MichaelZahniser-Wikimedia-600x300.ashx<br>
+    -Pine:<br>
+    https://cdn.britannica.com/50/6650-050-E268AC16/coniferous-forest-spruce-trees-forests-boreal-Northern.jpg<br>
+    -Brown bear:<br>
+    https://taigamallory.weebly.com/uploads/1/1/3/2/11325886/5800349.jpg<br>
+    -Owl Hawk:<br>
+    https://www.allaboutbirds.org/guide/assets/photo/37234381-480px.jpg<br>
+    -Spruces:<br>
+    https://hiddenspringstreefarm.com/images/Whitesprucehtf.jpg<br>
+    -Larch:<br>
+    https://media-cdn.tripadvisor.com/media/photo-s/11/df/cd/ad/larch-trees-in-full-splendor.jpg<br>
+    -Fir:<br>
+    https://itsataiga.weebly.com/uploads/1/9/7/8/19787127/9122286_orig.jpg<br>
+    -Birch:<br>
+    https://ourtaiga.weebly.com/uploads/2/0/3/4/20349307/132732351.jpg<br>
+    -Nanai location<br>
+    https://ars.els-cdn.com/content/image/1-s2.0-S1229545014000254-gr2.jpg<br>
+    -Nanai people<br>
+    https://i.ytimg.com/vi/pAtZnaCf1Ew/hqdefault.jpg<br>
+    -Nanai bag<br>
+    https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Nanai_bag_Museum_fuer_Voelkerkunde_Dresden_35109.jpg/301px-Nanai_bag_Museum_fuer_Voelkerkunde_Dresden_35109.jpg<br>
+    -Nanai clothing<br>
+    https://i.pinimg.com/736x/b2/3d/75/b23d750767282fb9b87e7f30894c8bb6.jpg </p>
+  </div>
+</footer>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+</body>
+</html>
